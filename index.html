@@ -36,15 +36,15 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <div class="bg-white p-5 border border-[#F1F2F4] rounded-lg">
                 <p class="text-[#323B49] text-[0.875rem] font-medium">Total</p>
-                <p class="text-[#002C5C] text-[1.5rem] font-bold">8</p>
+                <p id="total" class="text-[#002C5C] text-[1.5rem] font-bold">8</p>
             </div>
             <div class="bg-white p-5 border border-[#F1F2F4] rounded-lg">
                 <p class="text-[#323B49] text-[0.875rem] font-medium">Interview</p>
-                <p class="text-green-500 text-[1.5rem] font-bold">0</p>
+                <p id="interviewCount" class="text-green-500 text-[1.5rem] font-bold">0</p>
             </div>
             <div class="bg-white p-5 border border-[#F1F2F4] rounded-lg">
                 <p class="text-[#323B49] text-[0.875rem] font-medium">Rejected</p>
-                <p class="text-red-500 text-[1.5rem] font-bold">0</p>
+                <p id="rejectedCount" class="text-red-500 text-[1.5rem] font-bold">0</p>
             </div>
         </div>
         <hr class="text-[#E6E7E9] my-7.5 mx-auto">
@@ -57,13 +57,16 @@
             <p class="text-gray-500 text-[1rem]">8 jobs</p>
         </div>
         <div class="mb-4">
-            <button
-                class="btn w-20 h-8 text-white text-[0.75rem] font-semibold bg-[#3B82F6] rounded border border-[#F1F2F4] mr-2 hover:bg-blue-700 cursor-pointer">All</button>
-            <button
-                class="btn w-20 h-8 text-gray-500 text-[0.75rem] font-semibold bg-white rounded border border-[#F1F2F4] mr-2 hover:bg-gray-200 cursor-pointer">Interview</button>
-            <button
-                class="btn w-20 h-8 text-gray-500 text-[0.75rem] font-semibold bg-white border border-[#F1F2F4] rounded hover:bg-gray-200 cursor-pointer">Rejected</button>
+            <button id="allBtn" onclick="toggleStyle('allBtn', 'allCards')"
+                class="btn w-20 h-8 text-[0.75rem] font-semibold text-white bg-[#3B82F6] rounded border border-[#F1F2F4] mr-2 cursor-pointer">All</button>
+            <button id="interviewBtn" onclick="toggleStyle('interviewBtn', 'interviewTab')"
+                class="btn w-20 h-8 text-[0.75rem] font-semibold text-gray-500 bg-white rounded border border-[#F1F2F4] mr-2 cursor-pointer">Interview</button>
+            <button id="rejectedBtn" onclick="toggleStyle('rejectedBtn', 'rejectedTab')"
+                class="btn w-20 h-8 text-[0.75rem] font-semibold text-gray-500 bg-white border border-[#F1F2F4] rounded cursor-pointer">Rejected</button>
         </div>
+
+    </section>
+    <section id="allCards" class="max-w-278 px-2 lg:px-0 mx-auto">
         <div class="mb-4 relative">
             <div class="bg-white p-6 border border-[#F1F2F4] rounded-lg">
                 <h4 class="text-[#002C5C] text-[1.125rem] font-semibold mb-1">Mobile First Corp</h4>
@@ -221,24 +224,25 @@
         </div>
     </section>
 
-    <section class="max-w-278 px-2 lg:px-0 mx-auto">
+    <!------------------- interviewTab ----------------->
+    <section id="interviewTab" class="max-w-278 px-2 lg:px-0 mx-auto">
         <div class="lg:px-0 mx-auto bg-white px-6 py-28 rounded-lg border border-[#F1F2F4] text-center">
             <img class="mb-5 mx-auto" src="jobs.png" alt="">
             <h3 class="text-[#002C5C] text-[1.5rem] font-semibold mb-1">No jobs available</h3>
             <p class="text-gray-500 text-[1rem] leading-5.5">Check back soon for new job opportunities</p>
         </div>
-
     </section>
-    <section class="max-w-278 px-2 lg:px-0 mx-auto">
+
+    <!-------------------- rejectedTab ----------------->
+    <section id="rejectedTab" class="max-w-278 px-2 lg:px-0 mx-auto">
         <div class="lg:px-0 mx-auto bg-white px-6 py-28 rounded-lg border border-[#F1F2F4] text-center">
             <img class="mb-5 mx-auto" src="jobs.png" alt="">
             <h3 class="text-[#002C5C] text-[1.5rem] font-semibold mb-1">No jobs available</h3>
             <p class="text-gray-500 text-[1rem] leading-5.5">Check back soon for new job opportunities</p>
         </div>
-
     </section>
 
-    <!-- javaScript -->
+    <!------------------------- javaScript ---------------------------->
     <script src="script/jobTracker.js"></script>
 </body>
 
