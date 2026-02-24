@@ -130,7 +130,6 @@ mainContainer.addEventListener('click', function (event) {
         if (currentStatus === 'rejectedTabBtn') {
             renderRejected()
         }
-        interNoJobs.classList.add('hidden')
     }
 
 
@@ -188,7 +187,6 @@ mainContainer.addEventListener('click', function (event) {
         if (currentStatus === 'interviewTabBtn') {
             renderInterview()
         }
-        rejectNoJobs.classList.add('hidden');
 
     }
     // DELETE BUTTON------------------------------>
@@ -211,7 +209,7 @@ mainContainer.addEventListener('click', function (event) {
 
 // renderInterview------------------------------->
 function renderInterview() {
-    // interviewTab.innerHTML = ''
+    interviewTab.innerHTML = ''
 
     for (let interview of interviewList) {
         console.log(interview);
@@ -240,7 +238,8 @@ function renderInterview() {
 
 // renderRejected----------------------->
 function renderRejected() {
-    rejectedTab.innerHTML = ''
+    rejectedTab.innerHTML =''
+
 
     for (let rejected of rejectedList) {
         console.log(rejected);
@@ -263,6 +262,8 @@ function renderRejected() {
                     </div>
                 </div>
             </div>`
-        rejectedTab.appendChild(div)
-    }
+            
+            rejectedTab.appendChild(div);
+        }
+        
 }
