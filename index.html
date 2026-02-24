@@ -54,7 +54,7 @@
         <section>
             <div class="flex justify-between items-center">
                 <h3 class="text-[#002C5C] text-[1.25rem] font-semibold mb-6">Available Jobs</h3>
-                <p class="text-gray-500 text-[1rem]">8 jobs</p>
+                <p class="text-gray-500 text-[1rem]"><span id="jobsCount"></span> jobs</p>
             </div>
             <div class="mb-4">
                 <button id="allTabBtn" onclick="toggleStyle('allTabBtn')"
@@ -85,7 +85,7 @@
                         class="rejectedBtn btn text-red-500 text-[0.875rem] font-semibold border border-red-500 rounded hover:bg-red-500 hover:text-white cursor-pointer px-3 py-2">REJECTED</button>
                     <div
                         class="deleteBtn btn w-8 h-8 border border-[#F1F2F4] rounded-full hover:bg-gray-200 cursor-pointer flex justify-center items-center absolute top-8.5 right-6">
-                        <i class="fa-regular fa-trash-can text-[#64748B]"></i>
+                        <i class="deleteBtn fa-regular fa-trash-can text-[#64748B]"></i>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                         class="rejectedBtn btn text-red-500 text-[0.875rem] font-semibold border border-red-500 rounded hover:bg-red-500 hover:text-white cursor-pointer px-3 py-2">REJECTED</button>
                     <div
                         class="deleteBtn btn w-8 h-8 border border-[#F1F2F4] rounded-full hover:bg-gray-200 cursor-pointer flex justify-center items-center absolute top-8.5 right-6">
-                        <i class="fa-regular fa-trash-can text-[#64748B]"></i>
+                        <i class="deleteBtn fa-regular fa-trash-can text-[#64748B]"></i>
                     </div>
                 </div>
             </div>
@@ -129,7 +129,7 @@
                         class="rejectedBtn btn text-red-500 text-[0.875rem] font-semibold border border-red-500 rounded hover:bg-red-500 hover:text-white cursor-pointer px-3 py-2">REJECTED</button>
                     <div
                         class="deleteBtn btn w-8 h-8 border border-[#F1F2F4] rounded-full hover:bg-gray-200 cursor-pointer flex justify-center items-center absolute top-8.5 right-6">
-                        <i class="fa-regular fa-trash-can text-[#64748B]"></i>
+                        <i class="deleteBtn fa-regular fa-trash-can text-[#64748B]"></i>
                     </div>
                 </div>
             </div>
@@ -152,7 +152,7 @@
                         class="rejectedBtn btn text-red-500 text-[0.875rem] font-semibold border border-red-500 rounded hover:bg-red-500 hover:text-white cursor-pointer px-3 py-2">REJECTED</button>
                     <div
                         class="deleteBtn btn w-8 h-8 border border-[#F1F2F4] rounded-full hover:bg-gray-200 cursor-pointer flex justify-center items-center absolute top-8.5 right-6">
-                        <i class="fa-regular fa-trash-can text-[#64748B]"></i>
+                        <i class="deleteBtn fa-regular fa-trash-can text-[#64748B]"></i>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                         class="rejectedBtn btn text-red-500 text-[0.875rem] font-semibold border border-red-500 rounded hover:bg-red-500 hover:text-white cursor-pointer px-3 py-2">REJECTED</button>
                     <div
                         class="deleteBtn btn w-8 h-8 border border-[#F1F2F4] rounded-full hover:bg-gray-200 cursor-pointer flex justify-center items-center absolute top-8.5 right-6">
-                        <i class="fa-regular fa-trash-can text-[#64748B]"></i>
+                        <i class="deleteBtn fa-regular fa-trash-can text-[#64748B]"></i>
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@
                         class="rejectedBtn btn text-red-500 text-[0.875rem] font-semibold border border-red-500 rounded hover:bg-red-500 hover:text-white cursor-pointer px-3 py-2">REJECTED</button>
                     <div
                         class="deleteBtn btn w-8 h-8 border border-[#F1F2F4] rounded-full hover:bg-gray-200 cursor-pointer flex justify-center items-center absolute top-8.5 right-6">
-                        <i class="fa-regular fa-trash-can text-[#64748B]"></i>
+                        <i class="deleteBtn fa-regular fa-trash-can text-[#64748B]"></i>
                     </div>
                 </div>
             </div>
@@ -222,7 +222,7 @@
                         class="rejectedBtn btn text-red-500 text-[0.875rem] font-semibold border border-red-500 rounded hover:bg-red-500 hover:text-white cursor-pointer px-3 py-2">REJECTED</button>
                     <div
                         class="deleteBtn btn w-8 h-8 border border-[#F1F2F4] rounded-full hover:bg-gray-200 cursor-pointer flex justify-center items-center absolute top-8.5 right-6">
-                        <i class="fa-regular fa-trash-can text-[#64748B]"></i>
+                        <i class="deleteBtn fa-regular fa-trash-can text-[#64748B]"></i>
                     </div>
                 </div>
             </div>
@@ -246,7 +246,7 @@
                         class="rejectedBtn btn text-red-500 text-[0.875rem] font-semibold border border-red-500 rounded hover:bg-red-500 hover:text-white cursor-pointer px-3 py-2">REJECTED</button>
                     <div
                         class="deleteBtn btn w-8 h-8 border border-[#F1F2F4] rounded-full hover:bg-gray-200 cursor-pointer flex justify-center items-center absolute top-8.5 right-6">
-                        <i class="fa-regular fa-trash-can text-[#64748B]"></i>
+                        <i class="deleteBtn fa-regular fa-trash-can text-[#64748B]"></i>
                     </div>
                 </div>
             </div>
@@ -260,7 +260,7 @@
 
         <!------------------- interviewTab ----------------->
         <section id="interviewTab" class="hidden">
-            <div class="lg:px-0 mx-auto bg-white px-6 py-28 rounded-lg border border-[#F1F2F4] text-center">
+            <div id="interNoJobs" class="lg:px-0 mx-auto bg-white px-6 py-28 rounded-lg border border-[#F1F2F4] text-center">
                 <img class="mb-5 mx-auto" src="jobs.png" alt="">
                 <h3 class="text-[#002C5C] text-[1.5rem] font-semibold mb-1">No jobs available</h3>
                 <p class="text-gray-500 text-[1rem] leading-5.5">Check back soon for new job opportunities</p>
@@ -269,7 +269,7 @@
 
         <!-------------------- rejectedTab ----------------->
         <section id="rejectedTab" class="hidden">
-            <div class="lg:px-0 mx-auto bg-white px-6 py-28 rounded-lg border border-[#F1F2F4] text-center">
+            <div id="rejectNoJobs" class="lg:px-0 mx-auto bg-white px-6 py-28 rounded-lg border border-[#F1F2F4] text-center">
                 <img class="mb-5 mx-auto" src="jobs.png" alt="">
                 <h3 class="text-[#002C5C] text-[1.5rem] font-semibold mb-1">No jobs available</h3>
                 <p class="text-gray-500 text-[1rem] leading-5.5">Check back soon for new job opportunities</p>
